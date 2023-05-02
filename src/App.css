@@ -1,0 +1,119 @@
+.App {
+  text-align: center;
+}
+
+#root{
+  height: 100%;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.LogIn{
+  height: 100%;
+  align-items: center;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.Calendar{
+  height: 100%;
+  align-items: center;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.LogUp{
+  height: 100%;
+  align-items: center;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+h1,h3,h2,span{
+  text-align: center;
+  font-family:"Bangers",cursive;
+}
+
+.form-input-login{
+  margin-bottom: 4%;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card{
+  width: 500px;
+  box-shadow: 0px 5px 20px #000000;
+  text-align: center;
+  padding: 1%;
+  background-color: rgba(255, 255, 255, 0.5);
+  justify-content: center;
+}
+
+html{
+  height: 100%;
+}
+
+body {
+  background-image: url("https://i.ibb.co/F8gCDLn/terrain-basket.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+}
+
+img-club{
+  border-radius: 50%;
+}
+.modal{
+  background-color: white;
+  padding: 30px;
+  height: 40%;
+  width:40%;
+}
+.modal-wrapper{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 115%;
+  align-items: center;
+}

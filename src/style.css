@@ -1,0 +1,48 @@
+/* Styles pour les en-têtes d'accordéon */
+.accordion h3 {
+    background-color: rgb(255, 0, 0);
+    color: rgb(16, 13, 13);
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 16px;
+    transition: 0.4s;
+  }
+  
+  /* Change la couleur de fond des en-têtes d'accordéon au passage de la souris */
+  .accordion h3:hover {
+    background-color: rgb(106, 133, 78);
+  }
+  
+  /* Styles pour les boutons d'accordéon "Ajouter"/"Enlever" */
+  .accordion h3::after {
+    content: '\002B'; /* caractère plus */
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+  }
+  
+  /* Styles pour les boutons d'accordéon "Enlever" */
+  .accordion h3.active::after {
+    content: "\2212"; /* caractère moins */
+  }
+  
+  /* Styles pour les panneaux d'accordéon */
+  .accordion-panel {
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.6s ease-in-out;
+    opacity: 0;
+  }
+  
+  /* Affiche les panneaux d'accordéon qui ont été activés */
+  .accordion-panel.show {
+    max-height: 500px; /* peut être ajusté en fonction de la taille souhaitée */
+    opacity: 1;
+  }
+  

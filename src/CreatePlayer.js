@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import {Button, TextField} from "@mui/material";
+import {Link} from "react-router-dom";
 
 const PlayerForm = () => {
   const [firstName, setFirstName] = useState('');
@@ -19,32 +21,33 @@ const PlayerForm = () => {
                 <h3>Ajouter un joueur dans l'équipe !!</h3>
                 <h4> Toutes les champs affichés doivent être <i>OBLIGATOIREMENT</i> rempli</h4>
                 <label>
-                    Prénom:
-                    <input type="text" value={firstName} onChange={(e) => setFirstName(e.target.value)} />
+                    <h3>Prénom du Joueur :</h3>
+                    <TextField id="outlined-basic" label="Prénom" variant="outlined" />
                 </label>
                 <br />
                 <label>
-                    Nom :
-                    <input type="text" value={lastName} onChange={(e) => setLastName(e.target.value)} />
+                    <h3>Nom du Joueur :</h3>
+                    <TextField id="outlined-basic" label="Nom" variant="outlined" />
                 </label>
                 <br />
                 <label>
-                    Date de naissance:
-                    <input type="date" value={birthdate} onChange={(e) => setBirthdate(e.target.value)} />
+                    <h3>Date de Naissance du Joueur :</h3>
+                    <TextField id="outlined-basic" label="Date de Naissance" variant="outlined" />
                 </label>
                 <br />
                 <label>
-                    Numéro de téléphone:
-                    <input type="tel" value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} />
+                <h3>Numéro de téléphone du Joueur :</h3>
+                    <TextField id="outlined-basic" label="Numéro de téléphone" variant="outlined" />
                 </label>
-                <br />
                 <label>
-                    Équipe :
-                    <select value={teamplayer} onChange={(e)=> setTeamPlayer(e.target.value)}>
-
-                    </select>
+                <h3>Numéro de licence du Joueur :</h3>
+                    <TextField id="outlined-basic" label="Numéro de licence" variant="outlined" />
                 </label>
-                <button type="submit">Enregistrer</button>
+                <br/>
+                <br/>
+                <Button variant="outlined">Enregistrer</Button>
+                <div style={{ marginLeft: '10px' }}><br/></div>
+                <Button variant="outlined" component={Link} to="/PlayerList">Retour</Button>
             </form>
         </div>
     </div>

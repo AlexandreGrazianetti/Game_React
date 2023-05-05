@@ -1,6 +1,7 @@
 //Page d'accueil permettant d'ajouter et de créer des évènements
 //Progression: Page fonctionne on peut modifier, créer et même 
-//supprimer des évènements et manque plus qu'à créer la liaison avec l'API
+//supprimer des évènements et manque plus qu'à créer la liaison avec l'API pour que la personne qui se connecte à son comtpe puisse retrouver tout ce qu'il a créer
+//c'est à dire les évnèments créés, la liste de ses joueurs.
 import React, { useState } from 'react';
 import { Calendar, momentLocalizer } from 'react-big-calendar';
 import moment from 'moment';
@@ -80,34 +81,34 @@ function App() {
 
   return (
     <div class="Calendar">
-        <div class="card">
-            <Menu/>
-            <Calendar
-                localizer={localizer}
-                events={events}
-                on
-                startAccessor="start"
-                endAccessor="end"
-                style={{ height: 500 }}
-                selectable
-                onSelectEvent={handleSelectEvent}
-                onSelectSlot={handleCreateEvent} />
-            <Modal
-                open={modalIsOpen}
-                onClose={() => setModalIsOpen(false)}
-                aria-labelledby={selectedEvent ? 'Modifier un événement' : 'Créer un événement'}
-            >
-                <div className="modal-wrapper">
-                    <div className="modal">
-                        <h2 id="modal-title">{selectedEvent ? 'Modifier un événement' : 'Créer un événement'}</h2>
-                        <TextField
-                            id="event-title"
-                            label="Titre"
-                            value={title}
-                            onChange={(event) => setTitle(event.target.value)}
-                            fullWidth
-                            margin="normal" />
-                        <TextField
+      <div class="card">
+        <Menu/>
+          <Calendar
+              localizer={localizer}
+              events={events}
+              on
+              startAccessor="start"
+              endAccessor="end"
+              style={{ height: 500 }}
+              selectable
+              onSelectEvent={handleSelectEvent}
+              onSelectSlot={handleCreateEvent} />
+          <Modal
+              open={modalIsOpen}
+              onClose={() => setModalIsOpen(false)}
+              aria-labelledby={selectedEvent ? 'Modifier un événement' : 'Créer un événement'}
+          >
+            <div className="modal-wrapper">
+                <div className="modal">
+                    <h2 id="modal-title">{selectedEvent ? 'Modifier un événement' : 'Créer un événement'}</h2>
+                    <TextField
+                        id="event-title"
+                        label="Titre"
+                        value={title}
+                        onChange={(event) => setTitle(event.target.value)}
+                        fullWidth
+                        margin="normal" />
+                    <TextField
                             id="event-start"
                             label="Début"
                             type="datetime-local"
@@ -116,26 +117,26 @@ function App() {
                             fullWidth
                             margin="normal"
                             InputLabelProps={{ shrink: true }} />
-                        <TextField
-                          id="event-end"
-                          label="Fin"
-                          type="datetime-local"
-                          value={moment(end).format('YYYY-MM-DDTHH:mm')}
-                          onChange={(event) => setEnd(new Date(event.target.value))}
-                          fullWidth
-                          margin="normal"
-                          InputLabelProps={{ shrink: true }} />
-                        <div class="checkbox">
-                          <FormGroup>
+                    <TextField
+                      id="event-end"
+                      label="Fin"
+                      type="datetime-local"
+                      value={moment(end).format('YYYY-MM-DDTHH:mm')}
+                      onChange={(event) => setEnd(new Date(event.target.value))}
+                      fullWidth
+                      margin="normal"
+                      InputLabelProps={{ shrink: true }} />
+                    <div class="checkbox">
+                      <FormGroup>
                         <FormControl control={<CheckBox defaultChecked />} label="Match" />
                         <FormControl required control={<Checkbox/>} label="Entraînement" />
-                        </FormGroup>
+                      </FormGroup>
                         </div>                      
                         <div className="modal-buttons">
                             {selectedEvent && (
-                                <Button color="error" variant="contained" onClick={handleDeleteEvent}>
-                                    Supprimer
-                                </Button>
+                              <Button color="error" variant="contained" onClick={handleDeleteEvent}>
+                                  Supprimer
+                              </Button>
                             )}
                             <Button color="primary" variant="contained" onClick={handleSaveEvent}>
                                 Sauvegarder
@@ -147,9 +148,8 @@ function App() {
                     </div>
                 </div>
             </Modal>
-            </div> 
-      </div>
-      
+          </div> 
+    </div>
     );
 }
       export default App;

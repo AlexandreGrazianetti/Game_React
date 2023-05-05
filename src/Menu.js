@@ -7,6 +7,7 @@ import GroupsTwoToneIcon from '@mui/icons-material/GroupsTwoTone';
 import SettingsIcon from '@mui/icons-material/Settings';
 import { Link } from 'react-router-dom';
 import { Icon } from '@mui/material';
+import PersonAddIcon from '@mui/icons-material/PersonAdd';
 
 export default function Menu() {
   const [value, setValue] = React.useState(0);
@@ -21,9 +22,10 @@ export default function Menu() {
               setValue(newValue);
             }}
           >
-           <BottomNavigationAction label="Accueil" icon={<HomeIcon />} />
+           <BottomNavigationAction label="Accueil" component={Link} to="/Accueil" icon={<HomeIcon />} />
            <BottomNavigationAction component={Link} to="/PlayerList"  label="Joueurs" icon={<GroupsTwoToneIcon />}  />
            <BottomNavigationAction label="Paramètres" icon={<SettingsIcon />} />
+           <BottomNavigationAction label="Ajouter un Joueur" component={Link} to="/CreatePlayer" icon={<PersonAddIcon/>}/>
           </BottomNavigation>
         </Box>
   );

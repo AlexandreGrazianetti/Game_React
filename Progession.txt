@@ -1,0 +1,27 @@
+Accueil.js:
+    Rôle:Page affichant le calendrier des évènements créé par l'utilisateur lors de sa connexion et permettant de créer, modifier et supprimer des évnèments
+    A savoir que chaque évènement permettra d'envoyer une notification.
+    Progression: Le calendrier fonctionne, la barre de menu fonctionne aussi, il manque juste l'action permettant de, dès la création d'un évènement dans le calendrier,
+     d'envoyer un message au numéro de téléphone de chaque joueur.
+LogIn.js:
+    Rôle: Page permettant de se connecter via une adresse mail et un mot de passe créer lors de l'inscription du compte utilisateur.
+    Progression: Les champs de saisies de textes fonctionne et manque plus de créer le script permettant de créer le token et ainsi avoir accès au reste de le fonctionnalité
+    du projet.
+Menu.js:
+    Rôle: Permet de traverser les différentes fonctionnalités de l'application comme avoir accès au Paramètres, au calendrier/Accueil et de la liste des joueurs
+    Progression:Fini
+CreatePlayer.js:
+    Rôle:
+    Progression:
+PlayerList.js:
+    Rôle:
+    Progression:
+App.js:
+    Rôle:
+    Progression:
+Loader.js:
+    Rôle:
+    Progression:
+LogUp.js:
+    Rôle:
+    Progression:

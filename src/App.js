@@ -6,7 +6,6 @@ import Accueil from'./Accueil';
 import Home from './Home';
 import CreatePlayer from './CreatePlayer';
 import PlayerList from './PlayerList';
-import Match from './Match';
 import { Navigate } from 'react-router-dom';
 import { Base64 } from 'js-base64';
 
@@ -44,6 +43,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
+        
         <Route path="/LogIn" element= {<LogIn/>}/>
         <Route path="/LogUp" element= {<LogUp/>}/>
         <Route path="/Accueil" element={<Accueil/>}/>     

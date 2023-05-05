@@ -27,16 +27,16 @@ function LogUp(props) {
                 <TextField id="outlined-basic" label="Email" variant="outlined" />
               </div>
               <h3 >Votre Nom :</h3>
-              <div class="form-input-login">
+              <div class="form-input">
                 <TextField type="outlined-basic" id="outlined-basic" label="Nom" variant="outlined" />
               </div>   
               <h3 >Votre Prénom :</h3>
               <div class="form-input-login">
                 <TextField type="outlined-basic" id="outlined-basic" label="Prénom" variant="outlined" />
               </div>  
-              <h3 >Votre numéro de téléphone:</h3>
+              <h3 >Votre nom d'utilisateur:</h3>
               <div class="form-input-login">
-                <TextField type="tel" id="outlined-basic" label="Téléphone" variant="outlined" />
+                <TextField type="tel" id="outlined-basic" label="Nom d'utilisateur" variant="outlined" />
               </div>   
               <h3 >Veuillez saisir un mot de passe :</h3>
               <div class="form-input-login">

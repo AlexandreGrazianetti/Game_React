@@ -3,7 +3,18 @@
 import { Button, TextField } from "@mui/material";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+//Importation de la bibliothèque javascript pour effectuer des appels HTTP
+import axios from 'axios';
+
 function LogUp(props) {
+
+  axios.get('http://votre-api.com/donnees')
+  .then(response => {
+    console.log(response.data);
+  })
+  .catch(error => {
+    console.log(error);
+  });
 
     const handleChange = (event) => {
       setFormData({

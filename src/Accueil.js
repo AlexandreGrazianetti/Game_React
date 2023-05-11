@@ -12,6 +12,9 @@ import '@mui/material/styles';
 import LogUp from './LogUp';
 import Menu from './Menu';
 import { CheckBox } from '@mui/icons-material';
+//Importation de la bibliothèque javascript pour effectuer des appels HTTP
+import axios from 'axios';
+
 
 
 moment.locale('fr');

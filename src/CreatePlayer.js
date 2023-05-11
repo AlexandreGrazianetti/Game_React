@@ -2,6 +2,10 @@ import React, { useState } from 'react';
 import {Button, TextField} from "@mui/material";
 import {Link} from "react-router-dom";
 
+//Importation de la bibliothèque javascript pour effectuer des appels HTTP
+import axios from 'axios';
+
+
 const PlayerForm = () => {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');

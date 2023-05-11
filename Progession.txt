@@ -11,17 +11,36 @@ Menu.js:
     Rôle: Permet de traverser les différentes fonctionnalités de l'application comme avoir accès au Paramètres, au calendrier/Accueil et de la liste des joueurs
     Progression:Fini
 CreatePlayer.js:
-    Rôle:
+    Rôle:Formulaire permettant de créer un joueur où le coach doit saisir le nom, prénom, date de naissance, numéro de téléphone et de licence du joueur qui souhaite ajouter
     Progression:
 PlayerList.js:
-    Rôle:
-    Progression:
+    Rôle:Fenêtre permettant d'afficher un tableau présentant le nom, prénom, date de naissance, numéro de licence et numéro de téléphone de chaque joueur de l'équipe
+    Progression:Fini il manque plus qu'à l'alimenter.
 App.js:
-    Rôle:
-    Progression:
+    Rôle: C'est le péage pour avoir accès aux différents fenêtres du projet.
+    Progression:Fini
 Loader.js:
-    Rôle:
-    Progression:
+    Rôle:Script permettant de créer un loading affichant que l'application se lance et un loader où un ballon de basket rebondi le temps que l'application soit prêts
+    Progression: Fini peut avoir quelques modification qui fonctionne.
 LogUp.js:
-    Rôle:
-    Progression:
+    Rôle:Formulaire d'inscription pour ainsi se connecter à son compte utilisateur et ainsi avoir accès aux différentes fonctionnalités de l'application
+    Progression: Front-end: fini:
+    Back-end: Manque plus qu'à y relier
+
+Comment ajouter les modifications dans mon dépôt GITHUB:
+
+Voici les étapes à suivre pour ajouter les modifications dans votre dépôt GitHub :
+
+1-Tout d'abord, vous devez vous assurer que vous êtes dans la branche appropriée. 
+Vous pouvez utiliser la commande git branch pour voir dans quelle branche vous vous trouvez et git checkout pour vous déplacer dans la branche appropriée si nécessaire.
+
+2-Une fois que vous êtes dans la branche appropriée, vous pouvez ajouter les modifications que vous avez apportées en utilisant la commande git add. Par exemple, si vous
+ voulez ajouter toutes les modifications que vous avez apportées,
+ vous pouvez utiliser la commande git add . 
+3-Après avoir ajouté les modifications, vous devez les enregistrer en utilisant la commande git commit. Vous pouvez inclure un message de commit pour décrire les 
+modifications que vous avez apportées en utilisant la commande git commit -m "votre message de commit".
+
+4-Ensuite, vous pouvez pousser les modifications vers votre dépôt GitHub en utilisant la commande git push. Si c'est la première fois que vous poussez des modifications,
+ vous devrez spécifier le nom de la branche et l'URL de votre dépôt GitHub. Sinon, vous pouvez simplement utiliser la commande git push.
+
+5-Une fois que les modifications ont été poussées vers votre dépôt GitHub, vous pouvez aller sur la page de votre dépôt sur GitHub et vérifier que les modifications ont été ajoutées.

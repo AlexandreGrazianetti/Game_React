@@ -5,7 +5,21 @@ import Typography from "@mui/material/Typography";
 import Menu from "./Menu";
 import { TableCell, TableHead, TableRow, Button } from "@mui/material";
 import { Link } from "react-router-dom";
+//Importation de la bibliothèque javascript pour effectuer des appels HTTP
+import axios from 'axios';
+
 const PlayersList = () => {
+  axios.post('http://votre-api.com/donnees', {
+    nom: 'Jean',
+    age: 30
+  })
+  .then(response => {
+    console.log(response.data);
+  })
+  .catch(error => {
+    console.log(error);
+  });
+  
   const [players, setPlayers] = useState([]);
 
   useEffect(() => {

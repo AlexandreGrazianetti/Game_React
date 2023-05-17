@@ -11,12 +11,25 @@ const PlayerForm = () => {
   const [lastName, setLastName] = useState('');
   const [birthdate, setBirthdate] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
-  const [teamplayer, setTeamPlayer] = useState ('');
 
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log(`Submitted: ${firstName} ${lastName}, born on ${birthdate}, phone number ${phoneNumber}`);
   };
+
+  axios.post('http://votre-api.com/donnees', {
+    firstName: setFirstName,
+    lastName: setLastName,
+    birthdate: setBirthdate,
+    phoneNumber: setPhoneNumber,
+  })
+  .then(response => {
+    console.log(response.data);
+  })
+  .catch(error => {
+    console.log(error);
+  });
+
 
   return (
     <div class="LogIn">

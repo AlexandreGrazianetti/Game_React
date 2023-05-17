@@ -9,35 +9,24 @@ import { Link } from "react-router-dom";
 import axios from 'axios';
 
 const PlayersList = () => {
-  axios.post('http://votre-api.com/donnees', {
-    nom: 'Jean',
-    age: 30
-  })
+  axios.get('http://votre-api.com/donnees')
   .then(response => {
     console.log(response.data);
   })
   .catch(error => {
     console.log(error);
   });
-  
-  const [players, setPlayers] = useState([]);
-
-  useEffect(() => {
-    fetch("https://mon-api.com/joueurs")
-      .then((response) => response.json())
-      .then((data) => setPlayers(data));
-  }, []);
 
   return (
     <div class="Calendar">
       <div class="card">
         <Menu/>
         <Card>
-          <CardContent>
-            <Typography variant="h5" component="h2">
-              Liste des joueurs
-            </Typography>
-            <table>
+        <CardContent>
+          <Typography variant="h5" component="h2">
+            Liste des joueurs
+          </Typography>
+          <table>
             <TableHead>
               <TableRow>
                 <TableCell>Nom</TableCell>
@@ -47,19 +36,9 @@ const PlayersList = () => {
                 <TableCell align="right">Numéro de téléphone</TableCell>
               </TableRow>
             </TableHead>
-              <tbody>
-                {players.map((player) => (
-                  <tr key={player.id}>
-                    <td>{player.nom}</td>
-                    <td>{player.prenom}</td>
-                    <td>{player.dateNaissance}</td>
-                    <td>{player.numeroLicence}</td>
-                    <td>{player.numeroTelephone}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </CardContent>
+              
+          </table>
+        </CardContent>
         </Card>
         <Button variant="outlined" component={Link} to="/CreatePlayer">Ajouter un Nouveau Joueur</Button>
       </div>

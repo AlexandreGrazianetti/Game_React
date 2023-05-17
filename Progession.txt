@@ -44,3 +44,17 @@ modifications que vous avez apportées en utilisant la commande git commit -m "v
  vous devrez spécifier le nom de la branche et l'URL de votre dépôt GitHub. Sinon, vous pouvez simplement utiliser la commande git push.
 
 5-Une fois que les modifications ont été poussées vers votre dépôt GitHub, vous pouvez aller sur la page de votre dépôt sur GitHub et vérifier que les modifications ont été ajoutées.
+
+Code à ajouter dans player list:
+
+<tbody>
+                {players.map((player) => (
+                  <tr key={player.id}>
+                    <td>{player.nom}</td>
+                    <td>{player.prenom}</td>
+                    <td>{player.dateNaissance}</td>
+                    <td>{player.numeroLicence}</td>
+                    <td>{player.numeroTelephone}</td>
+                  </tr>
+                ))}
+              </tbody>

@@ -1,0 +1,17 @@
+{
+  "name": "admin",
+  "nickName": "administrateur",
+  "phoneNumber": "0123456",
+  "password": "@Dmin4237",
+  "email": "alexg42@outlook.fr",
+  "licenceNumber": "87654321",
+  "teamId": 1
+}
+
+Connexion :
+alexg42@outlook.fr
+@Dmin4237
+
+faire le axios.post pour lier l'enregistrement d'un compte
+-utiliser MatchController pour faire TeamController
+

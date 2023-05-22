@@ -46,10 +46,11 @@ function App() {
         
         <Route path="/LogIn" element= {<LogIn/>}/>
         <Route path="/LogUp" element= {<LogUp/>}/>
-        <Route path="/Accueil" element={<Accueil/>}/>     
+        <Route path="/Accueil" element={<ProtectedRoute><Accueil/></ProtectedRoute>}/>     
         <Route path="/Home" element={<Home/>}/>
-        <Route path='/CreatePlayer' element={<CreatePlayer/>}/>
+        <Route path='/create-player' element={<CreatePlayer/>}/>
         <Route path="/PlayerList" element={<PlayerList/>}/>
+
       </Routes>
     </BrowserRouter>
   );

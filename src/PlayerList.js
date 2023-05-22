@@ -9,13 +9,13 @@ import { Link } from "react-router-dom";
 import axios from 'axios';
 
 const PlayersList = () => {
-  axios.get('http://votre-api.com/donnees')
-  .then(response => {
-    console.log(response.data);
-  })
-  .catch(error => {
-    console.log(error);
-  });
+  // axios.get('http://votre-api.com/donnees')
+  // .then(response => {
+  //   console.log(response.data);
+  // })
+  // .catch(error => {
+  //   console.log(error);
+  // });
 
   return (
     <div class="Calendar">

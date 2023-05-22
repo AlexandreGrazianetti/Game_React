@@ -13,7 +13,7 @@ function Home() {
   return (
     <div>
       <h2>Bienvenue sur Game Day !</h2>
-        <div class="wrapper" style={{ display: 'flex', alignItems: 'center' }}>
+        <div className="wrapper" style={{ display: 'flex', alignItems: 'center' }}>
             <CircularProgress/>
             <span style={{ marginLeft: '1rem' }}>
             Veuillez patienter pour que l'application se charge ...
